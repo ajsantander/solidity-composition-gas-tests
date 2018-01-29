@@ -1,10 +1,10 @@
 pragma solidity ^0.4.19;
 
-import "./Crowdsale.sol";
+import "./CompositedCrowdsale.sol";
 
 contract CompositedImpl {
 
-	function execute(Crowdsale crowdsale) public {
+	function execute(CompositedCrowdsale crowdsale) public {
 	    crowdsale.updateData(msg.sender);
 	}
 }
