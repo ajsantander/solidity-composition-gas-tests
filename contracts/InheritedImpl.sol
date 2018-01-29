@@ -5,6 +5,6 @@ import "./Crowdsale.sol";
 contract InheritedImpl is Crowdsale {
 	
 	function testInheritance() public {
-		someData[msg.sender] = !someData[msg.sender];
+		someData[msg.sender] = someData[msg.sender] + 1;
 	}
 }

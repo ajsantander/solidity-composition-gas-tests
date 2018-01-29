@@ -4,7 +4,7 @@ import "./CompositedImpl.sol";
 
 contract Crowdsale {
 
-	mapping(address => bool) public someData;
+	mapping(address => uint) public someData;
 
 	CompositedImpl compositedImpl;
 
@@ -12,22 +12,22 @@ contract Crowdsale {
 		compositedImpl = new CompositedImpl();
 	}
 
-	// Gas: 20834 (42106)
+	// Gas: 5570 (26842)
 	function testHardCoded() public {
-		someData[msg.sender] = !someData[msg.sender];
+		someData[msg.sender] = someData[msg.sender] + 1;
 	}
 
-	// Gas: 5900 (13586)
+	// Gas: 5614 (26886)
 	function testInheritance() public {
 		// override	
 	}
 
-	// Gas: 26534 (47806)
+	// Gas: 9344 (30616)
 	function testComposition() public {
 		compositedImpl.execute(this);
 	}
 	
-	function updateData(address key, bool val) public {
-	    someData[key] = val;
+	function updateData(address key) public {
+	    someData[key] = someData[key] + 1;
 	}
 }
