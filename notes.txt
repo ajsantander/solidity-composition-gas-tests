@@ -1,0 +1,10 @@
+# Calling
+Hardcoded: 5,570 (26,842) -1%
+Inherited: 5,614 (26,886) 100%
+Composited: 9,344 (30,616) +66%
+CompInherited: 6664 (27936) +18%
+
+# Deploying
+InheritedImpl: 83,124 (162,352) 100%
+CompositedCrowdsale: 254,291 (376,087) +204% 
+CompInherited: 176304 (296068) +112%
